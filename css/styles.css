@@ -1,22 +1,27 @@
 /* CSS GERAL */
 /* Estilos gerias */
 *{
-    /* Em todos os elementos do site essa vai ser as cores */
+    /* 
+       Em todos os elementos do site a cor vai ser #25282E, 
+       essa é a cor principal do projeto
+    */
 
     color: #25282E;
 }
 
 a, i{
-    /* Vamos  dizer que o a e o i eles vão ter uma transição 
-    de meio segundo para o hover e uma text-decoration para 
-    tirar o underline dos links*/
+    /* 
+        Vamos  dizer que o a e o i eles vão ter uma transição 
+        de meio segundo para o hover e uma text-decoration para 
+        tirar o underline dos links
+    */
 
     transition: .5s;
     text-decoration: none;
 }
 
 .secundary-color{
-    /* Cor secundário para colocar nos elementos gerais */
+    /* Cor secundária para colocar nos elementos gerais */
 
     color: #555;
 }
@@ -24,14 +29,35 @@ a, i{
 /* Criar uma classe para ajudar a centralizar as imagens gerais */
 
 .center-image{
-    /* Podemos usar essa classe caso a gente tenhamos de centralizar uma imagem */
+    /* 
+        Podemos usar essa classe caso a gente precise centralizar uma imagem.
+        E ela possui estilos:
+        background-size: cover: isso faz com o que a imagem
+        que esta dentro da div tenha que se adaptar ao máximo ao tamanho da div.
+
+        background-position: center: isso vai centralizar a imagem dentro da div.
+    */
 
     background-size: cover;
     background-position: center;
 }
 
+    /* Vamos padronizar os botões do site */
 .btn{
-    /* CSS para padronizarmos os botões */
+    /* 
+        CSS para padronizarmos os botões, vamos ter os estilos:
+        text-decoration: none: isso para tirar o underline caso 
+        o botão seja link.
+
+        background-color: #25282E: isso para colocar cor de fundo aos botões.
+
+        color: #FFF: isso para a cor dos textos dos botões.
+
+        padding: 7px 18px: isso para colocar paddings menores na 
+        parte do topo e de baixo, e colocar paddings maiores nas laterias.
+
+        border-radius: 0: isso para tirar os cantos arredndados dos botões do site.
+     */
 
     text-decoration: none;
     background-color: #25282E;
@@ -40,6 +66,7 @@ a, i{
     border-radius: 0;
 }
 
+/* Botão hover para termos uma animação quando passarmos o mouse em cima dos botões */
 .btn:hover{
     background-color: #333;
     color: #FFF;
@@ -48,22 +75,54 @@ a, i{
 
 
 /* CSS HEADER */
+/* Estilização  do header do site */
 #header{
+    /*
+        Vamos dizer primeiramente que o header 
+        vai ter texto alinhado ao centro para isso
+        vamos colocar:
+        text-align: center: para centralizar todos os textos.
+
+        padding: 20px: isso serve para colocarmos espaçamento 
+        em todos os lados interno do header.
+
+        border-bottom: 1px solid #ccc: para colocar uma borda embaixo
+        separando o header do navbar. 
+    */
+
     text-align: center;
     padding: 20px;
     border-bottom: 1px solid #ccc;
 }
 
 #header p{
+    /* 
+       Vamos dizer que o parágrafo do header vai ter uma 
+       margin-bottom(embaixo) de 0.
+    */
+
     margin-bottom: 0;
 }
 
 #logo-container{
-    display: 40px;
-    margin-right: 15px;
+    /*
+        Vamos dizer que o logo-container(o container da logo)
+        vai ter um display de flex.
+
+        E vai ter um justify-content: center, isso serve para
+        centralizar o texto e a logo.
+    */
+
+    display: flex;
+    justify-content: center;
 }
 
 #logo{
+    /*
+        Vamos dizer que a logo vai ter uma largura de 40px.
+        E a logo vai ter uma margin-right de 15px.
+    */
+
     width: 40px;
     margin-right: 15px;
 }
@@ -72,16 +131,31 @@ a, i{
 
 /* CSS NAVBAR */
 #navbar{
+    /* Criaremos um padding de 10px para termos um 
+       espaçamento interno em todos os cantos da navbar.
+       Vamos ter uma mmargin de 10px auto isso faz com que 
+       os icones fiquem espaçados também e centralize dando 
+       margin: auto, vamos ter uma margin de 10px + os 10px 
+       do padding em cima e embaixo, e margin automática dos lados
+       para centralizar o conteúdo.
+    */
+
     padding: 10px;
     margin: 10px auto;
 }
 
 #navbar a{
+    /* Vamos colocar nos links uma largura de 80px e uma cor de #444. */
+
     width: 80px;
     color: #444;
 }
 
 #navbar a:hover{
+    /* E vamos colocar um hover nos links de #C1B696, para criar uma animação
+       ao passar o mouse nos links. 
+    */
+
     color: #C1B696; 
 }
 /* CSS NAVBAR */
@@ -89,6 +163,21 @@ a, i{
 
 /* MAIN IMAGE */
 .main-image{
+    /* 
+       Vamos definir o main-image primeiro que é 
+       onde fica nossa imagem do banner, vamos colocar 
+       a imagem de fundo. 
+       Vamos colocar que o main-image vai ter uma altura
+       de 400px e vai usar background-image para colocar 
+       a imagem no fundo. Vamos colocar um margin-bottom 
+       de 30px para afastar dos demais conteúdos embaixo. 
+       E vamos colocar uma posição relativa para o conteúdo 
+       das informações da imagem se referenciar
+       por esse container main-image, com isso conseguimos
+       posicionar de forma mais fácil as informações do banner.
+
+    */
+
     height: 400px;
     background-image: url('../img/g_1.jpg');
     margin-bottom: 30px;
@@ -96,6 +185,17 @@ a, i{
 }
 
 .main-image-info{
+    /* 
+       Para as informações do banner vamos colocar uma cor 
+       de fundo branca.
+       Padding de 25px um espaçamento interno de texto.
+       Posição absoluta para alterar a posição do container
+       das inforações.
+       Com isso como é abosulta podemos referenciar em qualquer
+       eixo left 25px e bottom 25px, fazendo com que fique fixa
+       no canto inferior esquerdo do container principal do banner.
+    */
+
     background-color: #FFF;
     padding: 25px;
     position: absolute;
@@ -105,53 +205,125 @@ a, i{
 /* MAIN IMAGE */
 
 /* GALLERY */
+/* 
+   Vamos chamar todos os ids das divs que irão ter as imagens
+   da galeria. E para isso vamos usar background-image em cada id
+   das divs. Porque cada uma da div vai ter um id diferente e uma imagem
+   diferente.
+*/
 #img2{
-    /* Colocando as imagens em cada div container da galeria */
-
     background-image: url('../img/g_2.jpg');
 }
+
 #img3{
     background-image: url('../img/g_3.jpg');
 }
+
 #img4{
     background-image: url('../img/g_4.jpg');
 }
+
 #img5{
     background-image: url('../img/g_5.jpg');
 }
+
 #img6{
     background-image: url('../img/g_6.jpg');
 }
-/* GALLERY */
+
+/* 
+   Vamos começar agora a estilizar toda as outras partes
+   da galeria. Primeiramente vamos estilizar o título da seção
+   o gallery-container h1: vamos colocar no centro com text-align: center.
+   Agora vamos pra uma estilização mais conjunta onde vamos colocar:
+   gallery-container h1, as colunas de md-6 gallery-container .col-md-6,
+   e também as colunas de 12 gallery-container .col-12.
+   Para que quando ficar numa tela mobile também tenha estilização.
+   Vamos colocar uma margin-bottom de 50px, espaçando os conteúdos
+   embaixo deles.
+*/
 
 #gallery-container h1{
-    /* aqui estamos estilizadno o elemento: 
-       o titulo da seção gallery-container h1
-       vamos colocar ele sempre no centro
-     */
-
     text-align: center;
 }
 
 #gallery-container h1,
 #gallery-container .col-md-6,
 #gallery-container .col-12{
-    /* Vamos estilizar toda a parte da galeria
-    Ai  aqui estamos estilizadno vários elementos: 
-    o titulo da seção gallery-container h1
-    gallery-container .col-md-6
-    e o gallery-container .col-12 
-    para que quando fique mobile fique estilizado
-     */
-
     margin-bottom: 50px;
 }
 
+/* 
+   Vamos botar agora o small-image-container,
+   que é o container onde fica as imagens, e vamos
+   colocar uma altura de 250px que é onde as imagens
+   começam a aparecer.
+   E também vamos da um espaçamento embaixo da imagem de 20px
+   para o conteúdo dela, que é o texto explicando a imagem.
+*/
 .small-image-container{
-    /* Vamos estilizar esse para as imagens aparecerem
-        com essas dimensões */
-    
     height: 250px;
     margin-bottom: 20px;
 }
+/* GALLERY */
+
+
+/* FOOTER */
+footer{ 
+    /* Iremos definir uma borda no topo para 
+        dividir do resto dos conteúdos 
+        E teremos uma altura desse footer de 250px
+        E colocamos um padding nesse footer
+    */
+
+    border-top: 1px solid #ccc;
+    height: 250px;
+    padding: 30px;
+}
+
+footer i{
+    /* Iremos colocar para os icones 
+        desse footer uma font-size de 20px
+    */
+
+    font-size: 20px;
+}
+
+#social-icons-container{
+    /* Iremos colocar para o social-icons-container
+        que é o container que tem os icones de redes sociais
+        que ele tera um padding de 25px 
+    */
+
+    padding: 25px;
+}
+
+#social-icons-container div{
+    /* Iremos colocar nas divs do container das redes sociais 
+        para que elas fiquem ao centro da tela deixando os icones
+        no centro
+    */
+
+     text-align: center;
+}
+
+footer p{
+    /* Iremos colocar para os textos do footer para 
+        ficarem no centro da tela
+    */
+
+    text-align: center;
+    margin: 20px;
+}
+
+a:hover i{
+    /* Iremos colocar um hover nos icones para quando 
+        passarmos o mouse em cima deles mudarem de cor
+    */
+    
+    color: #C1B696;
+}
+/* FOOTER */
+
+
 

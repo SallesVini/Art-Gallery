@@ -14,15 +14,41 @@
     <link rel="stylesheet" href="css/styles.css" /> 
 </head>
 <body>
+    <!-- 
+        Nesse projeto inicial iremos utilizar o Bootstrap Grid 
+        para construirmos um layout responsivo e moderno.
+        A grid do Bootstrap é feita de: 
+        Linhas(row) as linhas basicamente são as separações horizontais,
+
+        Colunas(Col) são basicamente separações verticais,
+
+        Gutters são a separação entre cada coluna, usadas 
+        para espaçar e alinhar conteúdo de forma responsiva no sistema 
+        de grade Bootstrap.
+    -->
+
     <!-- HEADER e NAVBAR -->
+    <!-- Criaremos um container fluid responsável pelo Header e navbar -->
+    <!-- Criaremos dentro desse nosso container-fluid duas linhas -->
+    <!-- Uma linha para nosso header e outra linha para nossa navbar -->
     <div class="container-fluid">
+
+        <!-- Criaremos um header para informar ao html que esse é o cabeçalho -->
+        <!-- E colocamos uma row nele uma linha para esse header -->
         <header class="row" id="header">
+
+            <!-- Div com a classe logo-container, é onde ficara a nossa logo -->
             <div id="logo-container">
                 <img src="img/art_logo.svg" alt="Art" id="logo">
                 <h1>Art</h1>
             </div>
+
+            <!-- Subtítulo do nosso cabeçalho -->
             <p>Exibições de arte urbana</p>
         </header>
+
+        <!-- Ainda dentro do container-fluid e embaixo da nossa header -->
+        <!-- Criaremos nossa navbar, usaremos outra tag semantica a nav -->
         <nav id="navbar" class="container">
             <div class="row justify-content-center">
                 <a href="#">Home</a>
@@ -31,12 +57,25 @@
                 <a href="#">Contato</a>
             </div>
         </nav>
+
     </div>
     <!-- HEADER e NAVBAR -->
 
     <!-- MAIN IMAGE -->
-    <div class="container" id="main-image-container">
+    <!-- 
+        Vamos utilizar uma div com uma classe de container para criar
+        o container do nosso banner do site.
+
+        Dentro desse nosso container vamos ter uma div com classe main-image
+        que irá abrigar essa imagem do banner do site e vamos utilizar
+        a classe center-image que criamos para centralizar as imagens do site.
+    -->
+    <div class="container" id="main-i/mage-container">
         <div class="main-image center-image">
+
+            <!-- Teremos uma div com a classe main-image-info que é onde vamos 
+                 ter as informações da imagem do banner. 
+            -->
             <div class="main-image-info">
                 <h2>Arte no muro de Davi</h2>
                 <p class="secondary-color">Realizada em 16/12/2023</p>
@@ -47,12 +86,41 @@
     <!-- MAIN IMAGE -->
 
     <!-- GALLERY -->
+    <!-- 
+        Vamos criar um  container principal para a galeria.
+        Vamos ter uma divisão com 12 colunas uma col-12 
+        que vai ser o título opucando um espaço de 12 colunas.
+
+        E em seguida vamos ter as demais divisões onde vamos
+        colocar uma row, linha, com um gutter-md5 para da um 
+        espaçamento na horizontal de todas as colunas, das divs
+        que ficam em duas colunas para terem um respiro entre as divs.
+
+        E dentro dessa div, dessa linha, vamos ter as divs que irão
+        conter as imagens da galeria uma do lado da outra.
+
+        Essas divs que irão conter as imagens da galeria
+        elas vão ter essas medidas: terão col-12 e col-md-6
+        porque irá ocupar um espaço de 12 colunas, pois 
+        quando tiverem numa tela maior uma div vai ocupar 
+        espaço de 6 colunas e a outra ao lado de mais 6 colunas
+        ficando uma do lado da outra em telas grandes,
+        mas quando tiver uma resolução média irá ocupar 
+        um espaço de 6 colunas com isso ficando uma abaixo 
+        da outra isso para telas de mobile.
+    -->
     <div class="container" id="gallery-container">
        <div class="col-12">
         <h1>Artes em Destaque</h1>
        </div>
-       <div class="row gx-5">
+       <div class="row gx-md-5">
         <div class="col-12 col-md-6">
+            <!-- 
+                E vamos criar essa div small-image-container
+                que é onde vai ficar a imagem da galeria
+                e vamos colocar em cada div dessa um id diferente
+                para se referenciar a uma imagem única da galeria
+            -->
             <div class="small-image-container center-image" id="img2"></div>
             <h3>Obra de Arthur</h3>
             <p class="secondary-color">Realizada em: 26/01/2018</p>
@@ -85,7 +153,40 @@
        </div> 
     </div>
     <!-- GALLERY -->
+
+    <!-- FOOTER -->
+    <!-- 
+        Aqui no footer iremos utilizar mais uma tag semantica
+        que é a propria tag footer, e vamos utilizar a classe container
+        na tag footer para criarmos o container do footer.
+        Vamos colocar dentro do container do footer um parágrafo
+        com a classe cor secundária que criamos.
+        Vamos colocar também dentro do container do footer uma linha
+        para abrigar os icones das redes sociais, ficando 
+        row para criar a linha e justify-content-center para 
+        centralizarmos os icones.
+        E vamos dividir a área de 12 colunas em colunas de 1 coluna.
+        Para que em cada coluna fique um icone de rede sociais.
+        Então vai usar o resto da área vazia para centralizar os icones. 
+    -->
+    <footer class="container">
+        <p class="secondary-color">Nos encontre nas redes sociais:</p>
+        <div class="row justify-content-center" id="social-icons-container">
+            <div class="col-1">
+                <a href="#"><i class="bi bi-facebook secondary-color"></i></a>
+            </div>
+            <div class="col-1">
+                <a href="#"><i class="bi bi-instagram secondary-color"></i></a>
+            </div>
+            <div class="col-1">
+                <a href="#"><i class="bi bi-twitter secondary-color"></i></a>
+            </div>
+        </div>
+        <p class="secondary-color">Art &copy; 2023</p>
+    </footer>
+    <!-- FOOTER -->
 </body>
 </html>
+
 
 
